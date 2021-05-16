@@ -1,0 +1,44 @@
+print ("Enter the first three terms ")
+a=int(input("1st term: "))
+b=int(input("2nd term: "))
+c=int(input("3rd term: "))
+if((c-b)== (b-a)):
+    print (" The given sequence is in Arithmatic Progression")
+    ch=int(input("Do you want to check its sum upto nth term?\n1.YES \n2.NO\nEnter your choice: "))
+    if(ch==1):
+        n=int(input("Enter the upto term: "))
+        d=b-a
+        ap=a+((n-1)*d)
+        print(a," + ",b," + ",c," +.......+ upto ",n," = ",ap)
+    elif(ch==2):
+        exit()
+    else:
+        print("!!!!WRONG CHOICE EXITING!!!!")
+
+elif( c//b == b//a):
+    print (" The given sequence is in Geometric progression")
+    ch=int(input("Do you want to check its sum upto nth term?\n1.YES \n2.NO\nEnter your choice: "))
+    if(ch==1):
+        n=int(input("Enter the upto term: "))
+        r=c//b
+        gp=a*pow(r,n-1)
+        print(a," + ",b," + ",c," +.......+ upto ",n," = ",gp)
+    elif(ch==2):
+        exit()
+    else:
+        print("!!!!WRONG CHOICE EXITING!!!!")
+elif ((1//c)-(1//b)== ((1//b)-(1//a) )):
+    print (" The given sequence is in Harmonic Progression")
+    ch=int(input("Do you want to check its sum upto nth term?\n1.YES \n2.NO\nEnter your choice: "))
+    if(ch==1):
+        n=int(input("Enter the upto term: "))
+        d=(1//b)-(1//a)
+        hp=(1//(a+((n-1)*d)))
+        print(a," + ",b," + ",c," +.......+ upto ",n," = ",hp)
+    elif(ch==2):
+        exit()
+    else:
+        print("!!!!WRONG CHOICE EXITING!!!!")
+else:
+    print("!!!ERROR!!! Does not belong to AP, GP or HP")
+
