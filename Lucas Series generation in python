@@ -1,0 +1,17 @@
+nterms=int(input())
+n1,n2,n3=0,0,1
+c=0
+if nterms==1:
+  print(n1)
+elif nterms==2:
+  print(n1,n2)
+elif nterms==3:
+  print(n1,n2,n3)
+else:
+  while c<nterms:
+    print(n1,end=' ')
+    nth=n1+n2+n3
+    n1=n2
+    n2=n3
+    n3=nth
+    c+=1
